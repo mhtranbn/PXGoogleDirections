@@ -132,7 +132,12 @@ public class PXGoogleDirections: NSObject {
 				return nil
 			}
 			// Create the base URL with minimal arguments
-			var preparedRequest = "\(PXGoogleDirections.apiBaseURL)?key=\(PXGoogleDirections.apiKey)&origin=\(f)&destination=\(t)"
+			var preparedRequest = "\(PXGoogleDirections.apiBaseURL)?origin=\(f)&destination=\(t)&key="
+//            var preparedRequest = "\(PXGoogleDirections.apiBaseURL)?origin=\(f)&destination=\(t)&key=\(PXGoogleDirections.apiKey)"
+
+            NSLog("dasdasdsadsa \(preparedRequest)")
+            //https://maps.googleapis.com/maps/api/directions/json?origin=22.338601,103.851689&destination=22.496499,103.977883&key=
+
 			// Handle transport mode
 			if let m = mode {
 				preparedRequest += "&mode=\(m)"
